@@ -4,12 +4,6 @@
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
 <title>Mountain DAWGS | Summit County Dog Walking</title>
-<link rel="icon" href="/favicon.ico" sizes="any">
-<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-<link rel="manifest" href="/site.webmanifest">
-<meta name="theme-color" content="#111827">
 <meta content="Professional dog walking and adventure hiking in Summit County, Colorado. Serving Frisco, Breckenridge, Silverthorne, Dillon, Copper, and Keystone with GPS-tracked, safety-first mountain outings." name="description"/>
 <meta content="dog walker Summit County, dog hiking Frisco, Breckenridge dog walking, pet services Silverthorne, adventure dog walks Colorado, dog sitting Dillon" name="keywords"/>
 <meta content="Mountain DAWGS" name="author"/>
@@ -263,7 +257,7 @@
         .bg-stone { background-color: var(--stone); }
 
         .story-grid {
-            display: grid;
+            display: grid; 
             grid-template-columns: 1fr 1fr;
             gap: 40px;
             align-items: center;
@@ -307,6 +301,53 @@
         }
 
         .about-card { border-left: 5px solid var(--ochre); }
+
+        /* Founders */
+        .founders-grid {
+            display: grid;
+            grid-template-columns: repeat(3, minmax(0, 1fr));
+            gap: 24px;
+            margin-top: var(--space-md);
+        }
+        .profile-card {
+            background: var(--white);
+            border-radius: var(--radius-std);
+            box-shadow: var(--shadow-std);
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            border-top: 4px solid var(--ochre);
+        }
+        .profile-media {
+            width: 100%;
+            aspect-ratio: 16 / 10;
+            background: var(--stone);
+            overflow: hidden;
+        }
+        .profile-media img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center;
+            border-radius: 0;
+        }
+        .profile-body { padding: 22px 22px 24px 22px; }
+        .profile-kicker {
+            font-size: 0.72rem;
+            font-weight: 800;
+            color: rgba(0,0,0,0.55);
+            margin-bottom: 8px;
+        }
+        .profile-name {
+            font-size: 1.1rem;
+            margin-bottom: 10px;
+            color: var(--forest-green);
+            font-weight: 800;
+        }
+
+        @media (max-width: 980px) {
+            .founders-grid { grid-template-columns: 1fr; }
+        }
         
         .service-card { padding: 0; overflow: hidden; margin-bottom: var(--space-md); }
         .service-header {
@@ -891,11 +932,11 @@
 <div class="story-grid">
 <div>
 <h2>Our Story</h2>
-<p>Mountain DAWGS started with a simple belief: dogs deserve more than a quick sidewalk break. Here in Summit County, we are surrounded by trails, alpine air, and wide-open space, so instead of defaulting to neighborhood walks, we seek outdoor adventures that give dogs real enrichment and a true reset.</p>
+<p>Mountain DAWGS started with a simple belief: dogs deserve more than a quick sidewalk break. Here in Summit County, were surrounded by trails, alpine air, and wide-open space, so instead of defaulting to neighborhood walks, we seek outdoor adventures that give dogs real enrichment and a true reset.</p>
 <br/>
-<p>But adventure only works when it's paired with safety. Through volunteering with <a href="https://www.lostpetrescue.org/" style="color: #555; text-decoration: underline;" target="_blank" rel="noopener"><strong>Summit Lost Pet Rescue</strong></a>, we've seen firsthand how preventable mistakes and under-qualified care can lead to dogs getting loose, lost, or put at risk.</p>
+<p>But adventure only works when its paired with safety. Through volunteering with <a href="https://www.lostpetrescue.org/" style="color: #555; text-decoration: underline;" target="_blank" rel="noopener"><strong>Summit Lost Pet Rescue</strong></a>, weve seen firsthand how preventable mistakes and under-qualified care can lead to dogs getting loose, lost, or put at risk.</p>
 <br/>
-<p>That's why we built Mountain DAWGS around safe, controlled adventures. Our goal is to give you confidence that your dog is not only having fun, but is being handled with the care, awareness, and preparation that mountain outings require.</p>
+<p>Thats why we built Mountain DAWGS around safe, controlled adventures. Our goal is to give you confidence that your dog is not only having fun, but is being handled with the care, awareness, and preparation that mountain outings require.</p>
 </div>
 <div>
 <img alt="Dog at a mountain lake" src="images/lake-walk.jpg" data-fallback="images/lake-walk.jpg" loading="lazy"/>
@@ -905,20 +946,48 @@
 </section>
 
 <section class="bg-stone" id="about">
-<div class="container">
-<div class="story-grid">
-<div class="about-images-container">
-<img alt="Greg and Shadow Selfie" src="images/greg-shadow.jpg" style="border: 5px solid white;" data-fallback="images/greg-shadow.jpg" loading="lazy"/>
-<img alt="Laura and Greg with Shadow" src="images/Greg_Laura_Profile.jpeg" loading="lazy"/>
-</div>
-<div class="about-card">
-<h2>Meet Laura, Greg + Shadow</h2>
-<p><strong>Laura &amp; Greg Shoenfeld</strong> are local professionals and dog enthusiasts who love rescuing and loving one lucky dog at a time. When not working they can usually be found hiking, biking, or paddling around Frisco with their rescue dog - Shadow. Greg is also a volunteer with Summit Lost Pet Rescue where he puts his passion for animals to work helping owners reunite with their lost pets.</p>
-<p><strong>Shadow</strong> is a six year old Border-Lab with a wild streak. Shadow can often be found hiking and biking Peaks and other trails in Frisco, swimming alongside her parents when paddle boarding, or out with Greg leading the charge on lost pet rescue missions.</p>
-<p>If you see us around town please say hello. And yes, Shadow would like a treat!</p>
-</div>
-</div>
-</div>
+  <div class="container">
+    <h2>Founders</h2>
+
+    <div class="founders-grid">
+      <!-- Founder 1 -->
+      <article class="profile-card">
+        <div class="profile-media">
+          <img alt="Greg Shoenfeld with Shadow" src="images/greg-shadow.jpg" data-fallback="images/greg-shadow.jpg" loading="lazy"/>
+        </div>
+        <div class="profile-body">
+          <div class="profile-kicker">Founder</div>
+          <div class="profile-name">Greg Shoenfeld</div>
+          <p>Greg is local outdoor enthusiast and founder of Mountain Dawgs. In his free time, Greg is a team lead at Summit Lost Pet Rescue. When not helping reunite lost pets, Greg can be found rain, snow, or shine on trails around Frisco and throughout the county with his dog Shadow.</p>
+        </div>
+      </article>
+
+ <!-- Founder 2 -->
+      <article class="profile-card">
+        <div class="profile-media">
+          <img alt="Laura Duff" src="images/lingbear2.jpeg" data-fallback="images/Greg_Laura_Profile.jpeg" loading="lazy"/>
+        </div>
+        <div class="profile-body">
+          <div class="profile-kicker">Co-Founder</div>
+          <div class="profile-name">Laura Duff</div>
+          <p>Laura Duff is a Frisco local and event manager best known throughout Summit for the personality that she brings to instruction at Summit Barre and Fitness. When not helping organize educational events or toning bodies, Laura can be found riding and walking with Shadow and Greg.</p>
+        </div>
+      </article>
+
+      <!-- Founder 3 -->
+      <article class="profile-card">
+        <div class="profile-media">
+          <img alt="Brandon Ciullo with his dogs" src="Images/Brandon.jpg" data-fallback="images/Brandon.JPG" loading="lazy"/>
+        </div>
+        <div class="profile-body">
+          <div class="profile-kicker">Co-Founder</div>
+          <div class="profile-name">Brandon Ciullo</div>
+          <p>Brandon Ciullo is a local legend having founded Summit Lost Pet Rescue, where he has helped reunite over 1,300 lost pets with their thankful owners. In addition to pet rescue, Brandon is a faithful member of Summit&apos;s Rescue Group and Water Rescue Team. When not out on rescues, Brandon is seeking out wet adventures with his four fur babies.</p>
+        </div>
+      </article>
+
+    </div>
+  </div>
 </section>
 
 <section id="services">
@@ -933,16 +1002,25 @@
     <div class="services-list">
         <div class="service-tier">
             <div class="service-top-row">
-                <span class="service-title"><strong>The Quick Rip (30 min)</strong></span>
+                <span class="service-title"><strong>Initial Meet & Greet (30 min)</strong></span>
                 <span class="service-price">$30</span>
             </div>
-            <div class="service-desc">The Short Loop is our shortest offering and is ideal if you need us to stop in regularly to alleviate pressure and your busy schedule. This is also a great initial meet and greet for us to get to know you and your dog before going on bigger outings.</div>
+            <div class="service-desc">We will use this initial meeting to share some treats and pets with your dog, build a rapport, and test their mobility and temperament ahead of scheduling longer outings.</div>
         </div>
 </br>
 
         <div class="service-tier">
             <div class="service-top-row">
-                <span class="service-title"><strong>The Classic Loop (60 min | ~2 miles)</strong></span>
+                <span class="service-title"><strong>The Quick Rip (45 min | ~1 mile)</strong></span>
+                <span class="service-price">$40</span>
+            </div>
+            <div class="service-desc">Perfect for puppies and senior dogs. A shorter, gentler outing designed for safe movement, fresh air, and lots of sniff breaks without overdoing it. Great for potty routines, confidence-building, and light exercise.</div>
+        </div>
+</br>
+
+        <div class="service-tier">
+            <div class="service-top-row">
+                <span class="service-title"><strong>The Classic Loop (60 min | ~2–2.5 miles)</strong></span>
                 <span class="service-price">$50</span>
             </div>
             <div class="service-desc">A well-rounded adventure with enough time to move, explore, and settle. Ideal for maintaining routine, fitness, and a happy, calm pup afterward.</div>
@@ -960,16 +1038,17 @@
 
         <div class="service-tier">
             <div class="service-top-row">
-                <span class="service-title"><strong>Dogs Big Day (2–3 hrs | ~5–7 miles)</strong></span>
+                <span class="service-title"><strong>Dogs Big Day (3+ hrs | ~5–7 miles)</strong></span>
                 <span class="service-price">$85</span>
             </div>
             <div class="service-desc">Built for dogs who thrive on big adventures. Extended time on the trail with scenic routes, rest breaks, hydration, and attentive pacing for a safe outing.</div>
-        </div>
-            <p style="margin-top: 25px; color: var(--ochre); font-weight: 800; font-family: 'Montserrat', sans-serif; text-align: center;">Looking for half-day or full-day options, give us a call or drop us a line.</p>
+</br>
+<p style="margin-top: 15px; color: var(--ochre); font-weight: 800; font-family: 'Montserrat', sans-serif;">Looking for half-day or full-day options, or something else give us a call or drop us a line.</p>        
+</div>
         <div class="info-card" id="pickup-trailhead">
       <h3>Flexible Logistics</h3>
-      <p>To maximize your dog’s time on trail, we can <strong>pick up and drop off at your home</strong> or <strong>meet you at your preferred trailhead</strong> (great for visitors and busy schedules).</p>
-    </div>
+      <p>To maximize your dog’s time on trail, we can <strong>pick up and drop off at your home</strong> or <strong>meet you at your preferred trailhead</strong> (great for visitors and busy schedules).</p>    
+</div>
     <p style="margin-top: 20px;"><em>*Extra dogs from same household +$20. Discounts for frequent adventurers.</em></p>
 </div>
 </div>
@@ -990,7 +1069,7 @@
 
 <div class="info-card" id="what-to-expect">
 <h3>What to Expect</h3>
-<p>A simple, consistent routine so your dog knows what's happening and you know what you're paying for.</p>
+<p>A simple, consistent routine so your dog knows whats happening and you know what youre paying for.</p>
 <ul>
 <li>A quick pre-outing check: harness fit, paws, hydration, and trail plan.</li>
 <li>Trail selection based on weather, crowds, and your dogs age, fitness, and temperament.</li>
@@ -1005,7 +1084,7 @@
 <ul>
 <li>Weather: we go out in snow and light rain. We reschedule for lightning, high wind, or unsafe conditions.</li>
 <li>Cancellations: please give as much notice as possible so we can re-route the day (your scheduling system will enforce the final policy once live).</li>
-<li>Meet &amp; Greet: a <strong>30-minute</strong> first visit before we schedule longer excursions, so we can confirm handling needs, home access, and emergency preferences. <em>Visiting from out of town?</em> Ask about our <strong>Flex Meet &amp; Greet</strong>, which can extend into a bigger hike if its a good fit.</li>
+<li>Meet &amp; Greet: a <strong>45-minute</strong> first visit before we schedule longer excursions, so we can confirm handling needs, home access, and emergency preferences. <em>Visiting from out of town?</em> Ask about our <strong>Flex Meet &amp; Greet</strong>, which can extend into a bigger hike if its a good fit.</li>
 </ul>
 </div>
 </div>
@@ -1075,7 +1154,7 @@
 </div>
 
 <div class="rescue-banner">
-<img alt="Summit Lost Pet Rescue Logo" class="rescue-logo" src="images/slpr_logo.png" data-fallback="images/slpr_logo.png" loading="lazy"/>
+<img alt="Summit Lost Pet Rescue Logo" class="rescue-logo" src="images/SLPR_Logo.png" data-fallback="images/SLPR_Logo.png" loading="lazy"/>
 <p>Our volunteering with <strong>Summit Lost Pet Rescue</strong> influences how we operate: prevention first, calm control, and disciplined response.</p>
 <hr style="border: 0; border-top: 1px solid rgba(255,255,255,0.3); margin: 20px 0;"/>
 <h4>Lost a pet in Summit County?</h4>
@@ -1248,7 +1327,7 @@ Breckenridge • Blue River • Copper • Dillon • Frisco • Silverthorne �
 </div>
 </div>
 <div class="footer-col footer-contact-block">
-<a class="footer-phone" href="tel:9709881015">(970) 239-1710</a>
+<a class="footer-phone" href="tel:9709881015">(970) 988-1015</a>
 <div class="social-icons">
 <a href="https://www.facebook.com/summitmountaindawgs/" target="_blank" rel="noopener" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
 <a href="https://www.instagram.com/mountaindawgs/" target="_blank" rel="noopener" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
